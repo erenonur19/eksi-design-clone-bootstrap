@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #030C40;
+}
+header{
+    background-color: white;
+}
+
+.navbar>img{
+    max-height: 105px; 
+    max-width: 105px; 
+}
+.navbar{
+    background-color: white;
+    margin-top: 10px;
+
+}
+.xyz{
+    color:#333;
+    margin-right: 2px;
+
+}
+.sub-nav>a{
+    margin-left: 35px;
+    margin-right: 25px;
+    color:#333;
+}
+.bod-1{
+    color:white;
+    margin-top: 160px;
+}
+ul>a{
+   color:white;
+   padding: 5px;
+}
+.col>img {
+    border-radius: 50%;
+    height:25px;
+    width:25px;
+  } 

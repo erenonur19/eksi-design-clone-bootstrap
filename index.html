@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ek%C5%9Fi_S%C3%B6zl%C3%BCk_ikon.svg/640px-Ek%C5%9Fi_S%C3%B6zl%C3%BCk_ikon.svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/5b22ab6187.js" crossorigin="anonymous"></script>
+
+    <title>eksisözlük</title>
+  </head>
+  <body>
+    <header class="fixed-top">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-12 mx-3">
+  
+            <nav class="navbar navbar-expand-lg">
+              <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ek%C5%9Fi_S%C3%B6zl%C3%BCk_yeni_logo.svg/512px-Ek%C5%9Fi_S%C3%B6zl%C3%BCk_yeni_logo.svg.png" alt="" class="navbar-brand">
+              
+              <form class="form-inline mx-5 search-bar border border-success rounded-pill pt-1 pb-1" style="max-width: 350px; max-height: 50px;">
+                <input class="form-control ml-sm-2 " style="border: 0px;" placeholder="başlık, #entry, @yazar">
+                <button class="btn  my-2 my-sm-0" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            <div class="ml-auto">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link xyz" href="#">giriş</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link xyz"  href="#">kayıt ol</a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+              
+            </nav>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav sub-nav mt-1">
+                <a class="nav-link" href="#">gündem</a>
+                <a class="nav-link" href="#">debe</a>
+                <a class="nav-link" href="#">sorunsallar</a>
+                <a class="nav-link" href="#">#spor</a>
+                <a class="nav-link" href="#">#ilişkiler</a>
+                <a class="nav-link" href="#">#siyaset</a>
+                <a class="nav-link" href="#">...</a>
+                <img style="max-height: 64px; max-width: 35px; margin-left: 78px; margin-right: 10px; padding-bottom:2px" src="https://yt3.ggpht.com/ytc/AKedOLRgviY_gErlxe6uZr6WLzt8thbrnh3Kv17RGJbkRw=s88-c-k-c0x00ffffff-no-rj">
+  
+              </img>
+              <img style="max-height: 64px; max-width: 35px; margin-left: 28px; margin-top: 1px;" src="data:image/png;base64,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">
+  
+            </img>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <!-- navbar-end -->
+    <!-- center-start -->
+    <div class="container bod-1" >
+      <div class="row">
+
+          <div class="col col-lg-3">
+            <h5 style="color:#888888">gündem <i class="fa-solid fa-gear ml-2"></i>  </h5>
+            <ul class="list-group mt-3">
+              <a href="#">Lorem, ipsum dolor. <small class="ml-3 text-muted text-decoration-none">49</small></a> 
+              <a href="#">Lorem ipsum dolor sit amet.  <small class="ml-3 text-muted">59</small></a>
+              <a href="#">Lorem ipsum dolor sit. <small class="ml-3 text-muted">129</small></a>
+              <a href="#">Lorem ipsum dolor sit amet. <small class="ml-3 text-muted">89</small></a>
+              <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing. <small class="ml-3 text-muted">79</small></a>
+              <a href="#">Lorem ipsum dolor sit. <small class="ml-3 text-muted">19</small></a>
+              <a href="#">Lorem, ipsum. <small class="ml-3 text-muted">3</small></a>
+              <a href="#">Lorem, ipsum dolor. <small class="ml-3 text-muted">44</small></a>
+              <a href="#">Lorem ipsum dolor sit. <small class="ml-3 text-muted">91</small></a>
+              <a href="#">Lorem ipsum dolor sit amet. <small class="ml-3 text-muted">39</small></a>
+              <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <small class="ml-3 text-muted">19</small></a>
+              <a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing. <small class="ml-3 text-muted">92</small></a>
+              <a href="#">Lorem, ipsum dolor. <small class="ml-3 text-muted">6</small></a>
+              <a href="#">Lorem, ipsum. <small class="ml-3 text-muted">4</small></a>
+              <a href="#">Lorem ipsum dolor sit. <small class="ml-3 text-muted">19</small></a>
+              <a href="#">Lorem, ipsum. <small class="ml-3 text-muted">429</small></a>
+              <a href="#">Lorem, ipsum dolor. <small class="ml-3 text-muted">11</small></a>
+              <a class="ml-auto" style="color:#00C8F5;" href="#">daha.. </a>
+            </ul>
+            
+        </div>
+        <div class="col col-lg-7 offset-lg-1 ml-0 mt-2">
+          <h4 style="color:#00C8F5">5.fatih terim dönemi</h4>
+          <p class="mt-3">şükela: <a style="color:#00C8F5" href="">tümü | bugün</a> </p>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta quam perspiciatis doloremque, doloribus aliquid odio ut, commodi at harum eaque nam illum impedit provident. Laboriosam, aliquid cumque tempora, sunt ratione blanditiis quis est veritatis nesciunt, corporis quaerat nostrum officiis nulla. Quia, necessitatibus! Eius officiis excepturi vel quod, magni ut aspernatur.</p>
+          <i href="#" class="fa-solid fa-arrow-down pr-4"></i><i class="fa-solid fa-arrow-up"></i>
+          <i class="fa-solid fa-ellipsis float-right "></i>
+          <i class="fa-solid fa-share float-right mr-3"></i>
+          <br>
+          <img class="avatar float-right ml-2" src="https://i.picsum.photos/id/345/200/300.jpg?hmac=_qOjrd4yW7rtmkQN1PgF8hczgXJezqk92MxgRUzB06s">
+          <h6 class="float-right"  style="color:#00C8F5">yin taraftari</h6> 
+          <br><br>
+          <p class="float-right" style="font-size:10px;">18.06.2022 19:46</p>
+          
+          
+
+        </div>
+
+        
+      </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
